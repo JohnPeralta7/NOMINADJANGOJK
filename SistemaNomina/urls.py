@@ -19,9 +19,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from cargo.views import menu
+from departamento.views import listado
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', menu, name='inicio' )
+    path('', menu, name='inicio' ),
+    path('departamentos/', listado, name='listado'),
+
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
