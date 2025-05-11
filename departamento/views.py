@@ -11,3 +11,12 @@ def listado(request):
         'departamentos' : departamentos,
         'title' : 'Listado departamental'
     })
+
+def create(request):
+    ...
+
+def update(request, id):
+    ...
+
+def delete(request, id):
+    ...
