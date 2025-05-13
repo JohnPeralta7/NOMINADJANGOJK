@@ -104,8 +104,8 @@
     <!-- Contenido principal -->
     <div class="container">
         <header class="page-header">
-            <h1 class="display-5 fw-bold text-primary">
-                <i class="fas fa-user-md me-2"></i>Directorio Cargos
+            <h1 class="display-5 fw-bold text-primary" style="color: black !important;">
+                <i class="fa-solid fa-building-user me-2" style="color: black;"></i>Directorio Cargo
             </h1>
             <p class="lead text-muted">Listado de cargos</p>
         </header>
@@ -119,7 +119,7 @@
         </form>
         <!-- Botón para nuevo registro -->
         <div class="d-flex justify-content-end mb-4">
-            <a class="btn btn-success"  href=''>
+            <a class="btn btn-success"  href="{% url 'cargo:cargos_create' %}">
                 <i class="fas fa-plus me-2"></i>Nuevo Cargo
             </a>
         </div>
@@ -142,10 +142,10 @@
                                 <td>{{carg.description}}</td>
                                 <td>
                                 <td class="text-center">
-                                    <a href='' class="btn btn-sm btn-primary me-1">
+                                    <a href="{% url 'cargo:cargos_update' carg.id %}" class="btn btn-sm btn-primary me-1">
                                         <i class="fas fa-edit"></i> Editar
                                     </a>
-                                    <a  href='' class="btn btn-sm btn-danger">
+                                    <a  href="{% url 'cargo:cargos_delete' carg.id %}" class="btn btn-sm btn-danger">
                                         <i class="fas fa-trash-alt"></i> Eliminar
                                     </a>
                                 </td>
