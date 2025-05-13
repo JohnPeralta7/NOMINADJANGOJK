@@ -26,6 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', menu, name='inicio' ),
     path('departamentos/',include('departamento.urls', namespace='departamento')),
+    path('cargoss/', include('cargo.urls',namespace='cargo'))
 
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
