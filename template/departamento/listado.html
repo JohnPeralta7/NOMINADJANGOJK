@@ -141,10 +141,10 @@
                                 <th scope="row">{{departamento.id}}</th>
                                 <td>{{departamento.description}}</td>
                                 <td class="text-center">
-                                    <a href="" class="btn btn-sm btn-primary me-1">
+                                    <a href="{% url 'departamento:actualizar_departamento' departamento.id %}" class="btn btn-sm btn-primary me-1">
                                         <i class="fas fa-edit"></i> Editar
                                     </a>
-                                    <a  href="" class="btn btn-sm btn-danger">
+                                    <a  href="{% url 'departamento:eliminar_departamento' departamento.id %}" class="btn btn-sm btn-danger">
                                         <i class="fas fa-trash-alt"></i> Eliminar
                                     </a>
                                 </td>
