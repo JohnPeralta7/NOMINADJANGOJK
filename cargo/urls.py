@@ -1,9 +1,10 @@
 from django.urls import path
-from .views import cargos, cargos_create, cargos_update, cargos_delete
+from .views import cargos, cargos_create, cargos_update, cargos_delete, signup
 
 app_name = 'cargo'
 
 urlpatterns = [
+    path('signup/', signup, name='signup'),
     path('cargos/', cargos, name='cargos'),
     path('crear/', cargos_create, name='cargos_create'),
     path('editar/<int:id>', cargos_update, name='cargos_update'),
