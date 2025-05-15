@@ -30,6 +30,5 @@ urlpatterns = [
     path('cargoss/', include('cargo.urls',namespace='cargo')),
     path('logout/', signout, name='logout'),
     path('signin/', signin, name='signin'),
-
-
+    path('tcontratos/', include('tcontrato.urls',namespace='t_contrato')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
