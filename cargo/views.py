@@ -1,3 +1,4 @@
+#si usas .save(commit=False) indicas a django que no lo vas a mandar al BD, sino que lo guardas temporalmente como un objeto (como hemos estado viendo en poo) asi que asi podremos acceder a los atributos y los valores que el usuario puso :)
 from django.shortcuts import render, redirect
 from .models import Cargo
 from .forms import CargoForm
