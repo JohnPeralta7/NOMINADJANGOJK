@@ -119,8 +119,8 @@
         </form>
         <!-- Botón para nuevo registro -->
         <div class="d-flex justify-content-end mb-4">
-            <a class="btn btn-success"  href="{% url 'departamento:crear_departamento' %}">
-                <i class="fas fa-plus me-2"></i>Nuevo Departamento
+            <a class="btn btn-success"  href="{% url 't_contrato:create' %}">
+                <i class="fas fa-plus me-2"></i>Nuevo tipo de contrato
             </a>
         </div>
 
@@ -132,19 +132,19 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Descripcion Departamental</th>
+                                <th scope="col">Descripcion contrato</th>
                             </tr>
                         </thead>
                         <tbody>
-                           {% for departamento in departamentos  %} 
+                           {% for t_contrato in dattcontrato %}
                             <tr>
-                                <th scope="row">{{departamento.id}}</th>
-                                <td>{{departamento.description}}</td>
+                                <th scope="row">{{t_contrato.id}}</th>
+                                <td>{{t_contrato.description}}</td>
                                 <td class="text-center">
-                                    <a href="{% url 'departamento:actualizar_departamento' departamento.id %}" class="btn btn-sm btn-primary me-1">
+                                    <a href="{% url 't_contrato:update' t_contrato.id %}" class="btn btn-sm btn-primary me-1">
                                         <i class="fas fa-edit"></i> Editar
                                     </a>
-                                    <a  href="{% url 'departamento:eliminar_departamento' departamento.id %}" class="btn btn-sm btn-danger">
+                                    <a  href="{% url 't_contrato:delete' t_contrato.id %}" class="btn btn-sm btn-danger">
                                         <i class="fas fa-trash-alt"></i> Eliminar
                                     </a>
                                 </td>
