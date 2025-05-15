@@ -27,7 +27,9 @@ urlpatterns = [
     path('', menu, name='inicio' ),
     path('departamentos/',include('departamento.urls', namespace='departamento')),
     path('cargoss/', include('cargo.urls',namespace='cargo')),
-    path('tcontratos/', include('tcontrato.urls',namespace='t_contrato'))
+    path('tcontratos/', include('tcontrato.urls',namespace='t_contrato')),
+    path('empleado/', include('empleado.urls', namespace='empleado')),
+
 
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
